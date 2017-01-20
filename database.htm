@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title> 
+Database Page
+</title>
+<link rel="stylesheet" type="text/CSS" href="mycss.CSS" /> 
+<script type="text/javascript" src="sound-mouseover.js"></script>
+<style>
+a:link    {color:yellow; background-color:transparent; text-decoration:none}
+a:visited {color:yellow; background-color:transparent; text-decoration:none}
+a:hover   {color:red; background-color:transparent; text-decoration:underline}
+a:active  {color:blue; background-color:transparent; text-decoration:underline}
+	
+	input[type=text], input[type=password] {
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+border: 2px solid lightgreen;
+border-radius: 4px;
+}
+	
+textarea {
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+border: 2px solid lightgreen;
+border-radius: 4px;
+}
+</style> 
+</head>
+
+
+<body style="background-color:lightgreen"> 
+
+<div align="center" id="header">
+<div id="leftlogo"><img  src="images/header_logo.png" alt="Left logo" title="”Left logo”"></div>
+<div id="rightlogo"><img  src="images/header_logo.png" alt="Right logo" title="Right logo”"></div>
+<div id="h1"><h1>NPC Database</h1>
+	</div>
+</div> <!-- header div-->
+<div id="logo">
+<a href="Home Page.htm">
+<img  src="images/LOGO.png" alt="Home Button" title="”Go Home!”"></a> 
+</div> 
+
+<div id="navBar">
+<h2 align="center" > Navigation</h2>
+ <ul>
+    <li><a href="Home Page.htm">Home</a></li>
+     <li><a href="feedback.htm">Feedback</a></li>
+     <li><a href="database.htm">Database</a></li>
+  </ul>
+</div> 
+
+<div id="cat">
+	<p align= "center">We want feedback!</p><br></br><br></br>
+	<p align= "center">Click on the cat!</p>
+<a href="feedback.htm" onmouseover="playclip();"><img src="images/cat_icon.png" alt="cat_spin" title="”Feedback Page”"></a> 
+</div> 
+
+<div id="mainContent">
+<p align="center">Please log-in to the database (you can use the default log-in).</p>
+
+<div id="db_form">
+<form action="dbportal.php" method="post">
+<fieldset>
+<legend style=color:deepskyblue>Database Log In:</legend>
+<p>Username: <input type="text" name="username" value="Ben"/><br />
+Password: <input type="password" name="password" value="password"/></p>
+</p>
+
+
+<p><input type="submit" value="Log In"></p>
+</fieldset>
+</form>
+
+</div>
+</div>
+
+<audio>
+<source src="images/meow.mp3">
+<source src="images/meow.ogg">
+</audio>
+<div id="sounddiv"><bgsound id="sound"></bgsound></div>	
+
+</body></html>

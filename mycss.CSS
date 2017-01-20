@@ -1,0 +1,582 @@
+@charset "utf-8";
+/* CSS Document */
+
+p {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 1.2em;
+}
+
+body
+{
+	margin: 0;
+ 	padding: 0;
+	font-family: arial, verdana, helvetica, sans-serif;
+}
+
+li {
+	list-style-type: none; 
+	background:url(images/bullet_green.png) no-repeat 0;
+}	
+
+li a {
+	margin-left: 30px;
+	padding: 10px;
+}
+
+ul { padding-left: 0.5em; }
+
+ul li { padding: 15px}
+
+#logo {
+	transition: background-color 0.5s;
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	width: 180px;
+	height: 80px;
+	background-color: #99CCCC;
+	border: 3px solid yellow;
+	border-radius: 25px;
+	box-shadow: 6px 6px 8px #888888;
+}
+#logo:hover { background-color: yellow;
+box-shadow: inset 0 0 0 10px yellow;}
+
+
+#logo img{
+	margin: 0;
+	width:50%;
+	height:100%;
+	transition-property: color; 
+ 	transition-duration: 3s; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+
+#leftlogo {
+	position: absolute;
+	top: 5px;
+	bottom: 5px;
+	left: 10px;
+	width: 150px;
+	height: 70px;
+	/*border: 3px solid #707070;*/
+}
+
+#leftlogo img{
+	margin: 0;
+	width:50%;
+	height:100%;
+}
+
+#rightlogo {
+	position: absolute;
+	top: 5px;
+	bottom: 5px;
+	right: 10px;
+	width: 150px;
+	height: 70px;
+	/*border: 3px solid #707070;*/
+}
+
+#rightlogo img{
+	margin: 0;
+	width:50%;
+	height:100%;
+}
+
+#cat {
+	color: #31837A;
+	position: relative;
+	top: 350px;
+	left: 20px;
+	width: 180px;
+	height: "images/cat_icon.png";
+	border: 3px solid yellow;
+	border-radius:15px;
+	
+	
+    animation-name: example;
+    animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes example {
+     0%   {background-color:red; color:white; left:20px; top:370px;}
+    25%  {background-color:purple; color:white; left:20px; top:435px;}
+    50%  {background-color:blue; color:white; left:20px; top:520px;}
+    75%  {background-color:green; color:white; left:20px; top:435px;}
+    100% {background-color:red; color:white; left:20px; top:370px;}
+}
+
+#cat img{
+	position: absolute;
+	animation: spin 5s linear infinite;
+	top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    margin:-60px 0 0 -60px  ;		
+}
+
+@keyframes spin { 
+	100% {  transform:rotate(360deg); } 
+}
+
+#navBar {
+	position: absolute;
+	color: yellow;
+	top: 100px;
+	left: 20px;
+	height: navBar;
+	width: 180px;
+	border: 3px solid yellow;
+	border-radius:15px;
+	background-color: #99CCCC;
+	padding: 0;
+	box-shadow: 6px 6px 8px #888888;
+
+}
+
+#header {
+	position: absolute;
+	top: 10px;
+	left: 220px;
+	right: 20px;
+	height: 80px;
+	border: 3px solid #585858;
+	border-radius: 15px;
+	background-color: #99CCCC; 
+	color: yellow;
+	box-shadow: 6px 6px 8px #888888;
+	animation: 
+	blink-caret 1s step-end infinite;
+}
+
+ /*The border blinks */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: yellow; }
+}
+
+h1{
+  white-space: nowrap;
+  overflow: hidden;
+  width: 10em;
+  animation: type 1s steps(60, end); 
+}
+
+h1:nth-child(2){
+  animation: type2 8s steps(60, end);
+}
+
+span{
+  animation: blink 1s infinite;
+}
+
+@keyframes type{ 
+  from { width: 0; } 
+} 
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
+} 
+
+@keyframes blink{
+  to{opacity: .0;}
+}
+
+
+#mainContent {
+	
+	position: absolute;
+	top: 100px;
+	bottom: 20px;
+	left: 220px;
+	right: 20px;
+	width: navBar;
+	border: 3px solid #585858;
+	border-radius:15px;
+	color: #585858;
+	background-color: #F0F0F0;
+	padding: 10px;
+}
+
+
+
+
+#innerContent2 {
+	position: absolute;
+	padding: 20px;
+	top: 500px;
+	right: 20px;
+	width: mainContent;
+	height: innerContent2;
+	border: 3px solid #C0C0C0;
+	border-radius:15px;
+	background-color: #FFFFFF;
+}
+
+#form_container {
+	position:absolute;
+    margin: 0 auto; 
+	width: 50%;
+	top: 60px;
+	left: 20px;
+	right: 20px;
+	border: 3px solid #C0C0C0;
+	border-radius:15px;
+	background-color: #FFFFFF;
+	padding: 10px;
+}
+
+#db_form {
+	position:absolute;
+    margin: 0 auto; 
+	width: 50%;
+	top: 60px;
+	left: 20px;
+	right: 20px;
+	border: 3px solid #C0C0C0;
+	border-radius:15px;
+	background-color: #FFFFFF;
+	padding: 10px;
+}
+}
+
+#rl {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	width: rl.png;
+	height: rl.png;
+	border: 3px solid #C0C0C0;
+	border-radius:15px;
+	background-color: #FFFFFF;
+}
+
+#innerContent5 {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	width: 460px;
+	height: 280px;
+	border: 3px solid #C0C0C0;
+	border-radius:15px;
+	background-color: #FFFFFF;
+}
+
+
+#innerContent6{
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	width: 180px;
+	height: 280px;
+	border: 3px solid #C0C0C0;
+	border-radius:15px;
+	background-color: #FFFFFF;
+}
+#header, #navigation, #innerContent1, #innerContent2, #innerContent3, #innerContent4 {
+padding-left: 20px;
+}
+
+
+
+
+  @keyframes phFadeInOut {
+  0% {  opacity:1;}
+  45% {opacity:1;}
+  55% {opacity:0;}
+  100% {opacity:0;}
+}
+
+#photo_gallery {
+	margin: 0 auto; 
+	position: relative;
+	padding: 10px;
+	width: 60%;
+	height: 80%;
+	border: 3px solid #585858;
+	border-radius:15px;
+	color: #585858;
+	background-color: #F0F0F0;
+	
+	
+}
+#ph1 {
+border: 5px solid lightgreen;
+border-radius:5px;
+	background-color: lightgreen;	
+  position:absolute;
+	top: 20px;
+	left: 20px;
+height: 200px;
+	width: 300px;
+  margin:0 auto;
+}
+
+#ph1 img {
+  position:absolute;
+  left:0;
+	margin: 0;
+	width:100%;
+	height:100%;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#ph1 img.top {
+animation-name: phFadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 3s;
+animation-direction: alternate;
+}
+
+#ph2 {
+border: 5px solid lightgreen;
+border-radius:5px;
+background-color: lightgreen;	
+  position:absolute;
+	top: 20px;
+	right: 20px;
+height: 200px;
+	width: 300px;
+  margin:0 auto;
+}
+
+#ph2 img {
+  position:absolute;
+  left:0;
+	margin: 0;
+	width:100%;
+	height:100%;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#ph2 img.top {
+	
+animation-name: phFadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 3s;
+animation-direction: alternate;
+}
+
+#ph3 {
+border: 5px solid lightgreen;
+border-radius:5px;
+background-color: lightgreen;
+	bottom: 20px;
+	left: 20px;
+  position:absolute;
+ height: 200px;
+	width: 300px;
+  margin:0 auto;
+}
+
+#ph3 img {
+  position:absolute;
+	margin: 0;
+	width:100%;
+	height:100%;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#ph3 img.top {
+animation-name: phFadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 3s;
+animation-direction: alternate;
+}
+
+#ph4 {
+border: 5px solid lightgreen;
+border-radius:5px;
+background-color: lightgreen;	
+	bottom: 20px;
+	right: 20px;
+  position:absolute;
+ height: 200px;
+	width: 300px;
+  margin:0 auto;
+}
+
+#ph4 img {
+  position:absolute;
+	margin: 0;
+	width:100%;
+	height:100%;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#ph4 img.top {
+animation-name: phFadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 3s;
+animation-direction: alternate;
+}
+
+#insertlink {   
+	margin: 0 auto;
+	position: absolute;
+	padding: 5px;
+	top: 120px;
+	left: 20px;
+	width: insertlink;
+	height: insertlink;
+	border: 3px solid yellow;
+	border-radius: 15px;
+	background-color: #99CCCC; 
+	color: yellow;
+}
+
+#insertmlink {   
+	margin: 0 auto;
+	position: absolute;
+	padding: 5px;
+	top: 180px;
+	left: 20px;
+	width: insertlink;
+	height: insertlink;
+	border: 3px solid yellow;
+	border-radius: 15px;
+	background-color: #99CCCC; 
+	color: yellow;
+}
+
+#deletelink {   
+	margin: 0 auto;
+	position: absolute;
+	padding: 5px;
+	top: 240px;
+	left: 20px;
+	width: insertlink;
+	height: insertlink;
+	border: 3px solid yellow;
+	border-radius: 15px;
+	background-color: #99CCCC; 
+	color: yellow;
+}
+
+#updatelink {   
+	margin: 0 auto;
+	position: absolute;
+	padding: 5px;
+	top: 300px;
+	left: 20px;
+	width: insertlink;
+	height: insertlink;
+	border: 3px solid yellow;
+	border-radius: 15px;
+	background-color: #99CCCC; 
+	
+}
+
+#selectlink {   
+	margin: 0 auto;
+	position: absolute;
+	padding: 5px;
+	top: 360px;
+	left: 20px;
+	width: insertlink;
+	height: insertlink;
+	border: 3px solid yellow;
+	border-radius: 15px;
+	background-color: #99CCCC; 
+}
+
+#resetlink {   
+	margin: 0 auto;
+	position: absolute;
+	padding: 5px;
+	top: 420px;
+	left: 20px;
+	width: insertlink;
+	height: insertlink;
+	border: 3px solid yellow;
+	border-radius: 15px;
+	background-color: #99CCCC; 
+}
+
+#portallink {   
+	margin: 0 auto;
+	position: absolute;
+	padding: 5px;
+	top: 120px;
+	right: 20px;
+	width: portallink;
+	height: portallink;
+	border: 3px solid yellow;
+	border-radius: 15px;
+	background-color: #99CCCC; 
+}
+#login {   
+	margin: 0 auto;
+	position: absolute;
+	padding: 5px;
+	top: 120px;
+	left: 500px;
+}
+
+/*
+#catdb {
+	color: #31837A;
+	position: relative;
+	top: 20px;
+	left: 800px;
+	width: 180px;
+	height: "images/cat_icon.png";
+	border: 3px solid yellow;
+	border-radius:15px;
+	
+	
+    animation-name: exampledb;
+    animation-duration: 20s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes exampledb {
+     0%   {background-color:paleturquoise; color:white; left:800px; top:20px;}
+    25%  {background-color:palegreen; color:white; left:800px; top:60px;}
+    50%  {background-color:palevioletred; color:white; left:800px; top:100px;}
+    75%  {background-color:palegoldenrod; color:white; left:800px; top:140px;}
+    100% {background-color:paleturquoise; color:white; left:800px; top:180px;}
+}
+
+#catdb img{
+	position: absolute;
+	animation: spinrev 5s linear infinite;
+	top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    margin:-60px 0 0 -60px  ;		
+}
+
+@keyframes spinrev { 
+	100% {  transform:rotate(-360deg); } 
+}
+*/
+
+
+
